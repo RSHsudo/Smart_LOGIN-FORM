@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartStore</title>
+    <link rel="stylesheet" href="smartlog.css">
+</head>
+
+
+<body>
+    <header class="header">
+        <h2>SMARTSTORE</h2>
+        <button class="btnlogin-popup">Login</button>
+        <div class="mobile navbar-btn">
+            <ion-icon name="menu-outline" class="mobile-navbar-icon"></ion-icon>
+            <ion-icon name="close-outline" class="mobile-navbar-icon"></ion-icon>
+
+        </div>
+    </header>
+
+
+    
+
+
+
+    <div class="former">
+        <span class="icon-t">
+            <i class="fa-solid fa-rectangle-xmark "></i>
+        </span>
+        <div class="login form-box">
+            <h2 id="form-s">Login</h2>
+            <form action="#">
+
+                <div class="input-box">
+                    <span class="icon">
+                        <i class="fa-regular fa-envelope-open"></i>
+                    </span>
+                    <input type="email" required>
+                    <label> Email</label>
+
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <i class="fa-solid fa-lock fa-shake"></i>
+                    </span>
+                    <input type="password" required>
+                    <label> Password</label>
+                </div>
+                <div class="remeber-forget">
+                    <label> <input type="checkbox"> Remember me</label>
+                    <a href="#">Forget Password ?</a>
+                </div>
+                <button type="submit" class="btn-login1"><a href="smart.html" required>Login</a></button>
+                <div class="login-register">
+                    <p>Don't have account ? <a href="#" class="login-link"> Register
+
+                        </a></p>
+
+                </div>
+
+
+
+
+
+            </form>
+
+        </div>
+        <div class="register form-box">
+            <h2 id="form-s">Registration</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon">
+                        <i class="fa-solid fa-user"></i>
+                    </span>
+                    <input type="text" required>
+                    <label> Username</label>
+
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <i class="fa-regular fa-envelope-open"></i>
+                    </span>
+                    <input type="email" required>
+                    <label> Email</label>
+
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <i class="fa-solid fa-lock fa-shake"></i>
+                    </span>
+                    <input type="password" required>
+                    <label> Password</label>
+                </div>
+                <div class="remeber-forget">
+                    <label> <input type="checkbox"> i agree to the terms & conditons </label>
+
+                </div>
+                <button type="submit" class="btn-login1"><a href="smart.html" required>Register</a></button>
+                <div class="login-register">
+                    <p>Already have account ? <a href="#" class="register-link"> Login
+
+                        </a></p>
+
+                </div>
+
+
+
+
+
+            </form>
+
+        </div>
+
+
+
+
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js">
+
+    </script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js">
+
+    </script>
+
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.436/build/spline-viewer.js"></script>
+    <spline-viewer url="https://prod.spline.design/E3qhFVASwFe8oIkf/scene.splinecode"></spline-viewer>
+
+    <script>
+        const former = document.querySelector('.former');
+        const loginlink = document.querySelector('.login-link');
+        const registerlink = document.querySelector('.register-link');
+
+        const btnpopup = document.querySelector('.btnlogin-popup');
+
+        const iconclose = document.querySelector('.fa-solid.fa-rectangle-xmark ');
+
+        loginlink.addEventListener('click', () => {
+            former.classList.toggle('active');
+        });
+
+        registerlink.addEventListener('click', () => {
+            former.classList.remove('active');
+        });
+        btnpopup.addEventListener('click', () => {
+            former.classList.toggle('active-popup');
+        });
+
+        iconclose.addEventListener('click', () => {
+            former.classList.remove('active-popup');
+        });
+
+        const mobile_nav = document.queryselector(".mobile.navbar-btn");
+        const navbar_head = document.querselector(".header")
+
+
+        const togglenavbar = () => {
+            navbar_head.classList.toggle("active");
+
+        };
+
+        mobile_nav.addEventListener("click", () => togglenavbar());
+    </script>
+</body>
+
+</html>
